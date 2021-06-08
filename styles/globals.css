@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+p {
+  margin: 15px 0;
+  line-height: 1.8;
+}
+
+.article-text ul,
+ol {
+  font-size: 110%;
+  line-height: 2.3;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.article-text pre {
+  background: #f4f4f4;
+  padding: 20px;
+  margin: 20px 0;
+  line-height: 2.3;
+  overflow: scroll;
+}
+
+.article-text h1 {
+  font-size: 35px;
+}
+
+.article-text h2,
+h3 {
+  font-size: 27px;
+}

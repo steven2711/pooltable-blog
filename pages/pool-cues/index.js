@@ -1,18 +1,18 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import Layout from '../components/Layout'
+import Layout from '../../components/Layout'
 import Link from 'next/link'
-import Post from '../components/Post'
-import {sortByDate} from '../helpers'
+import Post from '../../components/Post'
+import {sortByDate} from '../../helpers'
 
 
-export default function HomePage({posts}) {
+export default function PoolCuesPage({posts}) {
 
 
   return (
     <Layout>
-      <h1 className='text-5xl border-b-4 p-5 font-bold capitalize'>latest posts</h1>
+      <h1 className='text-5xl border-b-4 p-5 font-bold capitalize'>Pool Cues</h1>
 
       <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-5'>
           {posts.map((post, index) => <Post key={index} post={post}/>)}
@@ -39,7 +39,10 @@ export async function getStaticProps() {
 
      const markdownWithMeta = fs.readFileSync(path.join('posts', filename), 'utf-8')
 
+     
+
      const {data:frontmatter} = matter(markdownWithMeta)
+
 
      return {
        slug,
@@ -48,10 +51,14 @@ export async function getStaticProps() {
 
    })
 
+   const poolCues = posts.filter(post => post.frontmatter.category === 'Pool Cues')
+
+
+
 
   return {
     props: {
-      posts: posts.sort(sortByDate)
+      posts: poolCues.sort(sortByDate)
     }
   }
 }
