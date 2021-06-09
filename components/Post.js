@@ -27,12 +27,11 @@ export default function Post({post, itemNumber, compact}) {
             </div>
 
 
-            {!compact && (
-            <div className='flex justify-between items-center mt-6'>
-                <Link href={`/${slugify(post.frontmatter.category)}/${post.slug}`}>
-                    <a className={`text-gray-900 hover:text-blue-600 capitalize ${itemNumber === 0 ? 'xl:text-2xl xl:mt-10': null}`}>read more</a>
-                </Link>
-            </div>)}
+            {/* {!compact && (
+            <div className='flex justify-start items-center'>
+                <img src={post.frontmatter.author_image} alt='' className='h-10 w-10 rounded-full' />
+                <p className='ml-4 italic'>{post.frontmatter.author}</p>
+            </div>)} */}
             
              
         </div>

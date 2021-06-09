@@ -19,7 +19,7 @@ export default function Header() {
             <div className='container mx-auto flex py-5  px-8 flex-row justify-between items-center'>
                 <Link href='/'>
                     <a className='flex md:w-1/5 title-font font-medium items-center md:justify-start'>
-                        <span className='text-xl'>anything pool tables</span>
+                        <span className='text-xl lg:text-2xl'>anything pool tables</span>
                     </a>
                 </Link>
                 <nav className='hidden xl:flex flex-wrap md:w-4/5 items-center justify-end text-base md:ml-auto'>
