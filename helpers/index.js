@@ -1,5 +1,4 @@
 
-// turns phrases into urls
 
 export const slugify = (phrase) => {
 
@@ -14,3 +13,5 @@ export const sortByDate = (a, b) => {
     return new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
 
 }
+
+

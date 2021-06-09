@@ -28,6 +28,7 @@ ol {
 }
 
 .article-text h2,
-h3 {
+.article-text h3,
+.article-text h4 {
   font-size: 27px;
 }
