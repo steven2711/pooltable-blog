@@ -13,7 +13,7 @@ export default function PostPage({frontmatter: {title, category, date, cover_ima
 
     return (
         <Layout title={title}>
-            <button onClick={() => router.back()} className='cursor-pointer uppercase hover:text-indigo-300'>go back</button>
+            <button onClick={() => router.back()} className='cursor-pointer uppercase hover:text-indigo-300 pl-10'>go back</button>
             <div className='w-full px-10 py-6 bg-white rounded-lg shadow-md mt-6'>
                 <div className='flex justify-between items-center mt-4 flex-wrap mb-4'>
                     <h1 className='text-5xl mb-7'>{title}</h1>
