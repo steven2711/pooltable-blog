@@ -1,16 +1,25 @@
 import Link from 'next/link'
 import Search from './Search'
+import {useState} from 'react'
+import Hamburger from './Hamburger'
+import MobileOpen from './MobileOpen'
 
 
 
 
 export default function Header() {
+
+
+    const [open, setOpen] = useState(false)
+
+
+
     return (
-        <header className='bg-gray-900 text-gray-100 shadow w-full'>
-            <div className='container mx-auto flex p-5 flex-col md:flex-row justify-between items-center'>
+        <header className='bg-gray-900 text-gray-100 w-full fixed top-0 left-0 z-50'>
+            <div className='container mx-auto flex py-5  px-8 flex-row justify-between items-center'>
                 <Link href='/'>
-                    <a className='flex md:w-1/5 title-font font-medium items-center md:justify-start mb-4 md:mb-0'>
-                        <span className='ml-3 text-xl'>anything pool tables</span>
+                    <a className='flex md:w-1/5 title-font font-medium items-center md:justify-start'>
+                        <span className='text-xl'>anything pool tables</span>
                     </a>
                 </Link>
                 <nav className='hidden xl:flex flex-wrap md:w-4/5 items-center justify-end text-base md:ml-auto'>
@@ -41,9 +50,16 @@ export default function Header() {
                     </Link>
                 </nav>
                 <div className='hidden md:flex'>
-                <Search />
+                    <Search />
                 </div>
+                <button className='xl:hidden' onClick={() => setOpen(!open)}>
+                    <Hamburger open={open}/>
+                </button>
             </div>
+
+
+            {open ? <MobileOpen /> : null}
+
         </header>
     )
 }

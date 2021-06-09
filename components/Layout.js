@@ -4,7 +4,7 @@ import Header from './Header'
 
 export default function Layout({title, children, keywords, description }) {
     return (
-        <div>
+        <>
             <Head>
                 <title>{title}</title>
                 <link rel='icon' href='/favicon.io'/>
@@ -12,10 +12,10 @@ export default function Layout({title, children, keywords, description }) {
                 <meta name='description' content={description}/>
             </Head>
             <Header />
-            <main className='container mx-auto my-7'>
+            <main className='container mx-auto md:mt-32 mt-24'>
                 {children}
             </main>
-        </div>
+        </>
     )
 }
 
@@ -23,5 +23,5 @@ export default function Layout({title, children, keywords, description }) {
 Layout.defaultProps = {
     title: 'AnythingPoolTables.com',
     keywords: 'pool tables, cues, felt, billiards, billiard balls',
-    description: 'The best resource for anything you want to know relating to the game of pool and/or pool tables.'
+    description: 'The best resource for anything you want to know relating to the game of billiards and/or pool tables.'
 }

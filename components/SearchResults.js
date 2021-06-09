@@ -7,7 +7,7 @@ export default function SearchResults({results, handleClear}) {
 
 
     return (
-        <div className='absolute top-20 right-0 md:right-10 z-10 border-4 border-gray-500 bg-white text-black w-6/12 rounded-2xl'>
+        <div className='absolute overflow-y-scroll top-20 mx-12 right-0 lg:right-10 z-10 border-4 border-gray-500 bg-white text-black lg:w-6/12 rounded-2xl'>
             <div className='p-10'>
                 <div className='flex justify-between items-center mx-3'>
                      <h2 className='text-3xl mb-3 capitalize'>{results.length} results</h2>

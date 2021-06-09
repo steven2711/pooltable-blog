@@ -35,11 +35,11 @@ export default function Search() {
 
     return (
         <>
-        <div className='relative p-4'>
-            <div className='container mx-auto flex items-center justify-center md:justify-end'>
-                <div className='relative text-gray-600 w-72'>
+        <div className='py-3'>
+            <div className='flex items-center justify-center'>
+                <div className='relative text-gray-600 ml-4'>
                     <form>
-                        <input type='search' name='search' id='search' className='bg-white h-10 px-5 pr-10 rounded-full text-sm focus:outline-none w-72' value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} placeholder='Search posts...' />
+                        <input type='search' name='search' id='search' className='bg-white h-10 px-5 rounded-full text-sm focus:outline-none w-60' value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} placeholder='Search posts...' />
                         <FaSearch className='absolute top-0 right-0 text-black mt-3 mr-4' />
                     </form>
                 </div>
