@@ -7,7 +7,7 @@ export default function Post({post, itemNumber, compact}) {
 
 
     return (
-        <div className={`w-full px-10 py-6 bg-white rounded-lg shadow-md mt-6 ${itemNumber === 0 ? 'xl:col-span-2 xl:row-span-2' : null}`}>
+        <div className={`w-full px-10 py-6 bg-white rounded-lg shadow-md hover:shadow-xl transform hover:scale-101 mt-6 ${itemNumber === 0 ? 'xl:col-span-2 xl:row-span-2' : null}`}>
             {!compact && <Image src={post.frontmatter.cover_image} alt='' height={600} width={900} className='mb-4 rounded' />}
             
             <div className='flex justify-between items-center'>
