@@ -1,7 +1,7 @@
 import marked from "marked";
 
 export default function Article({ frontmatter, content }) {
-  const { title, category, date, cover_image, author, author_image } =
+  const { title, category, date, cover_image, author, author_image, excerpt } =
     frontmatter;
 
   return (

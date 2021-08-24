@@ -6,10 +6,15 @@ import Article from "../../components/Article";
 import GoBackBtn from "../../components/GoBackBtn";
 
 export default function PostPage({ frontmatter, content }) {
-  const { title } = frontmatter;
+  const { title, category, cover_image, excerpt } = frontmatter;
 
   return (
-    <Layout title={title}>
+    <Layout
+      title={title}
+      description={excerpt}
+      imagePath={cover_image}
+      keywords={category}
+    >
       <div className="container mx-auto mt-20 px-6 mb-4 lg:mb-12 md:mt-32 lg:mt-40 md:px-20">
         <GoBackBtn />
         <Article frontmatter={frontmatter} content={content} />
