@@ -1,64 +1,56 @@
-import fs from 'fs'
-import path from 'path'
-import matter from 'gray-matter'
-import Layout from '../../components/Layout'
-import Link from 'next/link'
-import Post from '../../components/Post'
-import {sortByDate} from '../../helpers'
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+import Layout from "../../components/Layout";
+import Post from "../../components/Post";
+import GoBackBtn from "../../components/GoBackBtn";
+import { sortByDate } from "../../helpers";
 
-
-export default function BilliardBallsPage({posts}) {
-
-
+export default function BilliardBallsPage({ posts }) {
   return (
     <Layout>
-      <h1 className='text-5xl border-b-4 p-5 font-bold capitalize'>Billiard Balls</h1>
+      <section className="container mx-auto p-5 mt-16 mb-12 lg:p-12">
+        <GoBackBtn />
+        <h1 className="text-2xl border-b-4 pb-3 mt-2 font-bold capitalize">
+          Billiard Balls
+        </h1>
 
-      <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-5'>
-          {posts.map((post, index) => <Post key={index} post={post}/>)}
-      </div>
-
-      <Link href='/'>
-        <a className='block text-center border border-gray-500 text-gray-800 rounded-md py-4 my-5 transition duration-500 ease select-none hover:text-white hover:bg-gray-900 focus:outline-none focus:shadow-outline w-full capitalize'>
-          all posts
-        </a>
-      </Link>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {posts.map((post, index) => (
+            <Post key={index} post={post} />
+          ))}
+        </div>
+      </section>
     </Layout>
-  )
+  );
 }
 
-
-
 export async function getStaticProps() {
+  const files = fs.readdirSync(path.join("posts"));
 
-  const files = fs.readdirSync(path.join('posts'))
+  const posts = files.map((filename) => {
+    const slug = filename.replace(".md", "");
 
-   const posts = files.map(filename => {
+    const markdownWithMeta = fs.readFileSync(
+      path.join("posts", filename),
+      "utf-8"
+    );
 
-     const slug = filename.replace('.md', '')
+    const { data: frontmatter } = matter(markdownWithMeta);
 
-     const markdownWithMeta = fs.readFileSync(path.join('posts', filename), 'utf-8')
+    return {
+      slug,
+      frontmatter,
+    };
+  });
 
-     
-
-     const {data:frontmatter} = matter(markdownWithMeta)
-
-
-     return {
-       slug,
-       frontmatter
-     }
-
-   })
-
-   const billiardBalls = posts.filter(post => post.frontmatter.category === 'Billiard Balls')
-
-
-
+  const billiardBalls = posts.filter(
+    (post) => post.frontmatter.category === "Billiard Balls"
+  );
 
   return {
     props: {
-      posts: billiardBalls.sort(sortByDate)
-    }
-  }
+      posts: billiardBalls.sort(sortByDate),
+    },
+  };
 }
