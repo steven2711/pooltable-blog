@@ -41,10 +41,10 @@ export default function Layout({
 
         {/* Google Search Console Verification */}
 
-        {/* <meta
+        <meta
           name="google-site-verification"
-          content=""
-        /> */}
+          content="-JvaYpKFpaQTbRpkLKV5DpaWlKRjs2Zwve8w-w3EZ44"
+        />
 
         {/* Rich Search Result Scripts */}
       </Head>
