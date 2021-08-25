@@ -4,9 +4,14 @@ import fs from "fs";
 import path from "path";
 import Article from "../../components/Article";
 import GoBackBtn from "../../components/GoBackBtn";
+import { useRouter } from "next/router";
 
 export default function PostPage({ frontmatter, content }) {
+  const router = useRouter();
   const { title, category, cover_image, excerpt } = frontmatter;
+
+  // Construct url for FB meta
+  const url = `https://anythingpooltables.com${router.asPath}`;
 
   return (
     <Layout
@@ -14,6 +19,7 @@ export default function PostPage({ frontmatter, content }) {
       description={excerpt}
       imagePath={cover_image}
       keywords={category}
+      url={url}
     >
       <div className="container mx-auto mt-20 px-6 mb-4 lg:mb-12 md:mt-32 lg:mt-40 md:px-20">
         <GoBackBtn />
