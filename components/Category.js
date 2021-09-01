@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Category({ data: { category, imagePath, path } }) {
   return (
-    <div className="relative w-11/12 md:w-4/5 h-32 lg:h-52 mx-auto my-5 lg:my-10 flex flex-col items-center justify-center">
+    <div className="w-11/12 md:w-1/3  h-32 lg:h-72 mx-5 my-5 lg:my-10 flex flex-col items-center justify-center hover:shadow-xl transform hover:scale-101">
       <Link href={path}>
         <div>
           <Image

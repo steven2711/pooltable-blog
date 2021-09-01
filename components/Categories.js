@@ -34,9 +34,11 @@ export default function Categories() {
       <h2 className="text-xl xl:text-3xl border-b-4 py-5 font-bold uppercase">
         categories
       </h2>
-      {categories.map((category, index) => (
-        <Category key={index} data={category} />
-      ))}
+      <div className="flex flex-wrap justify-center">
+        {categories.map((category, index) => (
+          <Category key={index} data={category} />
+        ))}
+      </div>
     </div>
   );
 }

@@ -2,17 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: #fbfaf5;
+}
+
 p {
-  margin: 15px 0;
+  margin-bottom: 2rem;
+  font-size: 1.3rem;
   line-height: 1.8;
+}
+
+.article-text {
+  background-color: #fbfaf5;
+}
+
+.title {
+  background-color: #fbfaf5;
 }
 
 .article-text ul,
 ol {
   font-size: 110%;
-  line-height: 2.3;
+  line-height: 2;
   font-weight: bold;
-  margin: 10px 0;
+  margin: 1rem 0 3rem;
+  list-style: circle inside;
 }
 
 .article-text pre {
@@ -24,11 +38,22 @@ ol {
 }
 
 .article-text h1 {
-  font-size: 35px;
+  font-size: 2rem;
 }
 
-.article-text h2,
+.article-text h2 {
+  margin: 3rem 0 2rem;
+  font-size: 1.6rem;
+  border-bottom: 1px solid black;
+}
+
 .article-text h3,
 .article-text h4 {
-  font-size: 27px;
+  font-size: 1.6rem;
+  margin: 1rem 0;
+}
+
+.article-text h3,
+.article-text h4 {
+  padding: 1rem;
 }
