@@ -77,7 +77,7 @@ export default function Layout({
 }
 
 Layout.defaultProps = {
-  title: "anythingpooltables",
+  title: "Anything Pool Tables",
   keywords: "pool tables, cues, felt, billiards, billiard balls, accessories",
   description:
     "The best resource for anything you want to know relating to the game of billiards and/or pool tables.",

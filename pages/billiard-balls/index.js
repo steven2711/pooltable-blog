@@ -8,7 +8,12 @@ import { sortByDate } from "../../helpers";
 
 export default function BilliardBallsPage({ posts }) {
   return (
-    <Layout>
+    <Layout
+      title="Billiard Balls | Anything Pool Tables"
+      description="Learn everything you need to know about billiard balls. From the physics behind ball movement, to how they affect your game play, Anything Pool Tables is the number one resource for all things billiards."
+      imagePath="/images/categories/billiard-balls.jpeg"
+      url="https://www.anythingpooltables.com/billiard-balls"
+    >
       <section className="container mx-auto p-5 mt-16 mb-12 lg:p-12">
         <GoBackBtn />
         <h1 className="text-2xl border-b-4 pb-3 mt-2 font-bold capitalize">

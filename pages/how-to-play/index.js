@@ -8,7 +8,12 @@ import { sortByDate } from "../../helpers";
 
 export default function HowToPlayPage({ posts }) {
   return (
-    <Layout>
+    <Layout
+      title="How To Play | Anything Pool Tables"
+      description="Learn all the rules of pool, various games, styles of play, and some common tips to perfect you billiards game."
+      imagePath="/images/categories/how-to-play.jpeg"
+      url="https://www.anythingpooltables.com/how-to-play"
+    >
       <section className="container mx-auto p-5 mt-16 mb-12 lg:p-12">
         <GoBackBtn />
         <h1 className="text-2xl border-b-4 pb-3 mt-2 font-bold capitalize">

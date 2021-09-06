@@ -8,7 +8,12 @@ import { sortByDate } from "../../helpers";
 
 export default function PoolTablesPage({ posts }) {
   return (
-    <Layout>
+    <Layout
+      title="Pool Tables | Anything Pool Tables"
+      description="Have you ever wondered just how much a pool table costs, what it takes to maintain them, or the history of billiards? Anything Pool Tables contains everything there is to know about pool tables!"
+      imagePath="/images/categories/pool-tables.jpeg"
+      url="https://www.anythingpooltables.com/pool-tables"
+    >
       <section className="container mx-auto p-5 mt-16 mb-12 lg:p-12">
         <GoBackBtn />
         <h1 className="text-2xl border-b-4 pb-3 mt-2 font-bold capitalize">
