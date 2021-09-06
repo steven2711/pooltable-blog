@@ -11,7 +11,7 @@ export default function AccessoriesPage({ posts }) {
     <Layout
       title="Accessories | Anything Pool Tables"
       description="Find out what to consider when buying pool tables and how it can impact your game. Learn all about light fixtures, chalk, racks, accessories &amp; more!"
-      imagePath="/images/categories/accessories.jpeg"
+      imagePath="images/categories/accessories.jpeg"
       url="https://www.anythingpooltables.com/accessories"
     >
       <section className="container mx-auto p-5 mt-16 mb-12 lg:p-12">

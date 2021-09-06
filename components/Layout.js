@@ -81,6 +81,6 @@ Layout.defaultProps = {
   keywords: "pool tables, cues, felt, billiards, billiard balls, accessories",
   description:
     "The best resource for anything you want to know relating to the game of billiards and/or pool tables.",
-  imagePath: "/images/showcase.jpeg",
+  imagePath: "images/showcase.jpeg",
   url: "https://anythingpooltables.com",
 };
